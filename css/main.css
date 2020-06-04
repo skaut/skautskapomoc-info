@@ -1,0 +1,545 @@
+body {
+	margin: 0;
+	font-family: themix, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale
+}
+
+@font-face {
+	font-family: "themix";
+	src: url(https://cdn.skauting.cz/fonts/TheMix_LT_400.eot);
+	src: url(https://cdn.skauting.cz/fonts/TheMix_LT_400.eot?+=#iefix) format("embedded-opentype");
+	src: url(https://cdn.skauting.cz/fonts/TheMix_LT_400.woff) format("woff"), url(https://cdn.skauting.cz/fonts/TheMix_LT_400.woff2) format("woff2"), url(https://cdn.skauting.cz/fonts/TheMix_LT_400.otf) format("opentype"), url(https://cdn.skauting.cz/fonts/TheMix_LT_400.svg#themix) format("svg");
+	font-weight: 400;
+	font-style: normal
+}
+
+@font-face {
+	font-family: "themix";
+	src: url(https://cdn.skauting.cz/fonts/TheMix_LT_400i.eot);
+	src: url(https://cdn.skauting.cz/fonts/TheMix_LT_400i.eot?+=#iefix) format("embedded-opentype");
+	src: url(https://cdn.skauting.cz/fonts/TheMix_LT_400i.woff) format("woff"), url(https://cdn.skauting.cz/fonts/TheMix_LT_400i.woff2) format("woff2"), url(https://cdn.skauting.cz/fonts/TheMix_LT_400i.otf) format("opentype"), url(https://cdn.skauting.cz/fonts/TheMix_LT_400i.svg#themix) format("svg");
+	font-weight: 400;
+	font-style: italic
+}
+
+@font-face {
+	font-family: "themix";
+	src: url(https://cdn.skauting.cz/fonts/TheMix_LT_700.eot);
+	src: url(https://cdn.skauting.cz/fonts/TheMix_LT_700.eot?+=#iefix) format("embedded-opentype");
+	src: url(https://cdn.skauting.cz/fonts/TheMix_LT_700.woff) format("woff"), url(https://cdn.skauting.cz/fonts/TheMix_LT_700.woff2) format("woff2"), url(https://cdn.skauting.cz/fonts/TheMix_LT_700.otf) format("opentype"), url(https://cdn.skauting.cz/fonts/TheMix_LT_700.svg#themix) format("svg");
+	font-weight: 700;
+	font-style: normal
+}
+
+@font-face {
+	font-family: "themix";
+	src: url(https://cdn.skauting.cz/fonts/TheMix_LT_700i.eot);
+	src: url(https://cdn.skauting.cz/fonts/TheMix_LT_700i.eot?+=#iefix) format("embedded-opentype");
+	src: url(https://cdn.skauting.cz/fonts/TheMix_LT_700i.woff) format("woff"), url(https://cdn.skauting.cz/fonts/TheMix_LT_700i.woff2) format("woff2"), url(https://cdn.skauting.cz/fonts/TheMix_LT_700i.otf) format("opentype"), url(https://cdn.skauting.cz/fonts/TheMix_LT_700i.svg#themix) format("svg");
+	font-weight: 700;
+	font-style: italic
+}
+
+@font-face {
+	font-family: "skautbold";
+	src: url(https://cdn.skauting.cz/fonts/skaut-bold-webfont.eot);
+	src: url(https://cdn.skauting.cz/fonts/skaut-bold-webfont.eot?+=#iefix) format("embedded-opentype");
+	src: url(https://cdn.skauting.cz/fonts/skaut-bold-webfont.woff) format("woff"), url(https://cdn.skauting.cz/fonts/skaut-bold-webfont.woff2) format("woff2"), url(https://cdn.skauting.cz/fonts/skaut-bold-webfont.otf) format("opentype"), url(https://cdn.skauting.cz/fonts/skaut-bold-webfont.svg#skautbold) format("svg");
+	font-weight: 400;
+	font-style: normal
+}
+
+:root {
+	font-family: themix, sans-serif;
+	font-size: 18px;
+	background-color: #f6ebd8
+}
+
+h1,
+h2 {
+	font-family: skautbold, sans-serif
+}
+
+.home {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1em
+}
+
+.home h1 {
+	font-size: 5rem;
+	text-align: center;
+	margin: 0;
+	color: #b85637
+}
+
+.button {
+	padding: 1em;
+	margin: .5em;
+	font-size: 1em
+}
+
+.button,
+.button-small {
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	background: #ea614a;
+	border-radius: .3em;
+	text-align: center;
+	border: none;
+	cursor: pointer
+}
+
+.button-small {
+	padding: .5em .7em;
+	margin: 0 0 .3em;
+	font-size: .8em
+}
+
+.button:disabled {
+	opacity: .6;
+	cursor: default
+}
+
+.alignEnd {
+	float: right
+}
+
+.buttonRow>.button-small:not(:first-child) {
+	margin-left: .5em
+}
+
+input[type=email],
+input[type=password],
+input[type=tel],
+input[type=text],
+select {
+	border: none;
+	font-size: 1em;
+	padding: .5em;
+	border-radius: .3em;
+	width: 15em;
+	background: #fff;
+	box-sizing: border-box
+}
+
+input[type=checkbox] {
+	width: 1.5em;
+	height: 1.5em;
+	margin-right: .5em
+}
+
+.checkboxWrap {
+	display: flex;
+	align-items: center;
+	justify-content: center
+}
+
+.checkboxWrap-small {
+	max-width: 20rem;
+	margin-top: 2em
+}
+
+.checkboxWrap-small input[type=checkbox] {
+	flex-shrink: 0;
+	margin-right: 1em
+}
+
+label {
+	margin-bottom: 1.5em;
+	display: flex;
+	flex-direction: column
+}
+
+label>:first-child {
+	margin-bottom: .5em
+}
+
+form {
+	align-items: center
+}
+
+.inAppMessage,
+form {
+	display: flex;
+	flex-direction: column
+}
+
+.inAppMessage {
+	max-width: 600px;
+	padding: 1em 0;
+	margin: 0 auto;
+	border-bottom: 1px solid #000
+}
+
+.inAppMessage:last-child {
+	border: none
+}
+
+.inAppMessage label {
+	margin: 1em 0 0
+}
+
+.logos {
+	display: flex;
+	align-items: center;
+	margin-bottom: 2em;
+	width: 100%;
+	justify-content: center
+}
+
+.logos>.spacer {
+	width: 4rem
+}
+
+.logo {
+	width: 12em;
+	margin: .5em 0 1em;
+	padding: 0 1em;
+	box-sizing: border-box;
+	max-width: 50%;
+	flex-shrink: 1;
+	max-height: 8em
+}
+
+.logo.elpida {
+	height: auto
+}
+
+.biggerText {
+	font-size: 1.2em;
+	display: inline-block;
+	margin-bottom: .2em
+}
+
+.subHeading {
+	color: #b85637;
+	margin-top: 0;
+	font-size: 3em;
+	font-family: themix, sans-serif;
+	text-align: center
+}
+
+@media (max-width:720px) {
+	.home h1 {
+		font-size: 3rem
+	}
+	.subHeading {
+		font-size: 1.5rem
+	}
+}
+
+.two {
+	display: flex;
+	margin: 0 1em 5rem
+}
+
+.two>div {
+	max-width: 500px;
+	margin: 0 1em;
+	background: #fff;
+	border-radius: .5em;
+	padding: 1em;
+	box-sizing: content-box
+}
+
+p.textPar {
+	text-align: center;
+	max-width: 600px
+}
+
+.two>div>h2 {
+	text-align: center;
+	margin: 0 0 .5em
+}
+
+.two>div p {
+	margin: 0
+}
+
+@media (max-width:1000px) {
+	.two {
+		flex-direction: column
+	}
+	.two>div {
+		margin: 1em
+	}
+}
+
+.person {
+	display: flex;
+	align-items: center;
+	margin: 4em 1em
+}
+
+.person img {
+	border-radius: 50%;
+	max-width: 10rem;
+	margin-right: 2em
+}
+
+.person>div {
+	max-width: 500px
+}
+
+.person .quote {
+	font-style: italic;
+	line-height: 1.4
+}
+
+.person p {
+	margin: 0
+}
+
+.person .name {
+	font-size: 1.3em;
+	margin: 1rem 0 0
+}
+
+.person .position {
+	margin: 0
+}
+
+@media (max-width:600px) {
+	.person {
+		flex-direction: column
+	}
+	.person img {
+		margin: 0 0 1em
+	}
+}
+
+.button-small:disabled,
+.button.disabled {
+	opacity: .7;
+	cursor: not-allowed
+}
+
+.helps {
+	text-align: center
+}
+
+.mangowebLogo {
+	max-width: 200px;
+	width: 80vw;
+	margin-bottom: 1em
+}
+
+.requests {
+	width: 100%;
+	max-width: 500px;
+	display: flex;
+	flex-direction: column
+}
+
+.requests-item {
+	margin-bottom: 1em;
+	background: #fff;
+	border-radius: .3em;
+	padding: .5em;
+	-webkit-animation: appear 1s .3s both;
+	animation: appear 1s .3s both;
+	opacity: 1
+}
+
+.requests-item>.button-small:last-child {
+	margin-top: .5em
+}
+
+.requests-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 1em 1em
+}
+
+.multiline {
+	margin: 0 0 0 1em;
+	font-style: italic
+}
+
+.subheading {
+	margin: 0 auto 2.5em;
+	font-style: italic
+}
+
+@-webkit-keyframes slide {
+	0% {
+		opacity: 0;
+		transform: translateY(-50px)
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0)
+	}
+}
+
+@keyframes slide {
+	0% {
+		opacity: 0;
+		transform: translateY(-50px)
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0)
+	}
+}
+
+.modal-wrap {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	-webkit-animation: slide .3s forwards;
+	animation: slide .3s forwards;
+	width: 450px;
+	max-width: calc(100% - 2rem);
+	z-index: 2
+}
+
+.modal {
+	background: #fff;
+	transform: translate(-50%, -50%);
+	padding: 1rem;
+	box-sizing: border-box;
+	border-radius: .3rem
+}
+
+.modal>:first-child {
+	margin-top: 0
+}
+
+@-webkit-keyframes appear {
+	0% {
+		opacity: 0
+	}
+}
+
+@keyframes appear {
+	0% {
+		opacity: 0
+	}
+}
+
+.modal-back {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #000;
+	opacity: .3;
+	-webkit-animation: appear .15s forwards;
+	animation: appear .15s forwards;
+	z-index: 1
+}
+
+.note-textare {
+	width: 100%!important;
+	font-size: 1em;
+	font-family: themix, sans-serif;
+	margin-bottom: 1rem;
+	line-height: 1.4;
+	height: 4.2em
+}
+
+.chooseCity h2 {
+	margin-bottom: 0
+}
+
+.chooseCity p {
+	margin-bottom: 2em
+}
+
+.chooseCity>div,
+.select {
+	min-width: 15rem;
+	margin-bottom: 1rem;
+	font-size: 1.2em
+}
+
+input[type=file] {
+	width: .1px;
+	height: .1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1
+}
+
+input[type=file]+label {
+	display: inline-block;
+	padding: .5em .7em;
+	text-decoration: none;
+	color: #fff;
+	background: #ea614a;
+	border-radius: .3em;
+	text-align: center;
+	border: none;
+	font-size: .8em;
+	cursor: pointer;
+	margin: 0 0 1em;
+	transition: transform .3s
+}
+
+input[type=file]+label:hover,
+input[type=file]:focus+label {
+	transform: scale(1.05)
+}
+
+.menu {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	padding: .25em
+}
+
+.userInfo {
+	margin: 0 .25em 0 0
+}
+
+.menu>.button-small {
+	margin: .25em
+}
+
+.menuItem-active {
+	display: none
+}
+
+.message,
+.termsPre h1 {
+	text-align: center
+}
+
+.termsPre p {
+	margin-bottom: 1em
+}
+
+.terms {
+	width: 100%;
+	max-width: 720px;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto
+}
+
+.terms h3 {
+	margin: 2rem 0 1rem
+}
+
+.terms p.numbered {
+	margin: 0 0 1rem 1em;
+	line-height: 1.4;
+	text-indent: -1em
+}
+
+.centerWrap {
+	display: flex;
+	justify-content: center
+}
+
+
+/*# sourceMappingURL=main.1b729c48.chunk.css.map */
